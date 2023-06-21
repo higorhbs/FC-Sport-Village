@@ -1,0 +1,174 @@
+{
+    "usuario": [
+        {
+            "nomeCompleto": "Romário Rodrigues",
+            "email": "romarior@yahoo.com",
+            "senha": "roro123",
+            "confirmarSenha": "roro123",
+            "nacionalidade": "Brasileiro",
+            "cpf": "012.345.789-10",
+            "nascimento": "23/01/1987",
+            "nomeLoja": "Gol de Placa Acessórios Futebolísticos",
+            "telefoneLoja": "011 98857-9592",
+            "whatsapp": "011 98857-9592",
+            "cepLoja": "01506-010",
+            "estadoLoja": "São Paulo",
+            "cidadeLoja": "São Paulo",
+            "bairroLoja": "Liberdade",
+            "ruaLoja": "Rua Américo de Campos",
+            "numero": "17"
+        }
+    ],
+    "adidas": [
+        {
+            "id": "1",
+            "descricao": "CAMISA 2",
+            "time": "REAL MADRID",
+            "tamanho": "G",
+            "preco": "299,99",
+            "contato":"011 98857-9592"
+        },
+        {
+            "id": "2",
+            "descricao": "CHUTEIRA X SPEEDFLOW.1 CAMPO",
+            "time": "NÃO SE APLICA",
+            "tamanho": "41",
+            "preco": "899,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "3",
+            "descricao": "LUVAS GOLEIRO PREDATOR MATCH FINGERSAVE",
+            "time": "NÃO SE APLICA",
+            "tamanho": "ÚNICO",
+            "preco": "179,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "MEIÃO 1 CR FLAMENGO 21/22",
+            "time": "FLAMENGO",
+            "tamanho": "M",
+            "preco": "49,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "BOLA COPA DO MUNDO AL RIHLA LEAGUE SOCIETY+",
+            "time": "NÃO SE APLICA",
+            "tamanho": "NÃO SE APLICA",
+            "preco": "299,99",
+            "contato":"011 98857-9592"   
+        }
+    ],
+    "nike": [
+        {
+            "id": "1",
+            "descricao": "CAMISA BRASIL II 2020/21 FEMININA",
+            "time": "BRASIL",
+            "tamanho": "G",
+            "preco": "249,99",
+            "contato":"011 98857-9592"
+        },
+        {
+            "id": "2",
+            "descricao": "CHUTEIRA VAPOR 14 ELITE CAMPO",
+            "time": "NÃO SE APLICA",
+            "tamanho": "41",
+            "preco": "1899,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "3",
+            "descricao": "LUVAS JR. GOALKEEPER MATCH INFANTIL",
+            "time": "NÃO SE APLICA",
+            "tamanho": "ÚNICO",
+            "preco": "79,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "MEIÃO 2020/21 JOGADOR UNISSEX",
+            "time": "CORINTHIANS",
+            "tamanho": "41",
+            "preco": "109,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "Bola Strike",
+            "time": "Barcelona",
+            "tamanho": "5",
+            "preco": "299,99",
+            "contato":"011 98857-9592"   
+        }
+    ],
+    "penalty": [
+        {
+            "id": "1",
+            "descricao": "CAMISETA  MAGNUS GOLEIRO OF 1",
+            "time": "NÃO SE APLICA",
+            "tamanho": "G",
+            "preco": "199,99",
+            "contato":"011 98857-9592"
+        },
+        {
+            "id": "2",
+            "descricao": "CHUTEIRA CAMPO",
+            "time": "NÃO SE APLICA",
+            "tamanho": "41",
+            "preco": "229,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "3",
+            "descricao": "LUVAS GOLEIRO DELTA 1 JUVENIL X",
+            "time": "NÃO SE APLICA",
+            "tamanho": "06",
+            "preco": "79,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "MEIÃO MATIS JUVENIL VIII T",
+            "time": "NÃO SE APLICA",
+            "tamanho": "ÚNICO",
+            "preco": "14,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "4",
+            "descricao": "BOLA CAMPO",
+            "time": "NÃO SE APLICA",
+            "tamanho": "ÚNICO",
+            "preco": "209,99",
+            "contato":"011 98857-9592"   
+        }
+    ],
+    "puma": [
+        {
+            "id": "1",
+            "descricao": "CAMISA MASCULINA",
+            "time": "PALMEIRAS",
+            "tamanho": "G",
+            "preco": "229,90",
+            "contato":"011 98857-9592"
+        },
+        {
+            "id": "2",
+            "descricao": "CHUTEIRA FUTURE 3.3 MASCULINA",
+            "time": "NÃO SE APLICA",
+            "tamanho": "41",
+            "preco": "899,99",
+            "contato":"011 98857-9592"   
+        },
+        {
+            "id": "3",
+            "descricao": "LUVAS GOLEIRO ULTRA GRIP 1 HYBRID PRO",
+            "time": "NÃO SE APLICA",
+            "tamanho": "11",
+            "preco": "539,90",
+            "contato":"011 98857-9592"   
+        }
+    ]
+}

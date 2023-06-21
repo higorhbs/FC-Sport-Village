@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/barra-inicial.css">
+    <script src="/Etapa-3/home/home.js" defer></script>
+</head>
+
+<!--Barra da página incial-->
+
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/home.html" class="logo link"><img src="/Etapa-3/img/home/logo_img/logo.png"
+                        width="230" height="110" alt="logo do site " id="imgpos" /></a>
+
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/home.html" class="nav-link link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Etapa-3/ofertas/ofertas.html" class="nav-link link">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Etapa-3/lancamentos/lancamentos.html" class="nav-link link">Lançamentos</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Codigo de quando a tela fica responsivel a barra responde
+            menu de navegação lateral animado e que pode ser fechado.  -->
+            <div class="nav-toggle-btn" onclick="openNav()">
+
+
+                <!--Codigo para que quando a tela fica responsivel com a barra ela aparece com o login e senha -->
+                <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-toggle-icon">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+
+
+    </header>
+    <!--Codigo para ativar a barra de pesquisa e login quandofica responsivel-->
+    <script>
+        function openNav() {
+            document.querySelector('.nav-container').classList.toggle('show-nav')
+        }
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+    <div class="products">
+        <div class="container">
+
+
+            <div class="product-items">
+                <!-- camisa barcelona -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/img/home/camisas/barcelona.jpg" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button li><a href="/Etapa-3/compra-produtos/compra-produtos.html" class="btn-buy">COMPRE
+                                    AGORA</a>
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">CAMISA BARCELONA</a>
+                        <p class="product-price">R$ 250.00</p>
+                        <p class="product-price">R$ 125.00</p>
+                    </div>
+
+                    <div class="off-info">
+                        <h2 class="sm-title">50% off</h2>
+                    </div>
+                </div>
+                <!-- FIM -->
+                <!-- camisa ucrania -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/img/home/camisas/ucrania.png" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">Camisa ucrania</a>
+                        <p class="product-price">R$ 250,00</p>
+                        <p class="product-price"><s>R$ 170,00</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">32% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM -->
+                
+                <!-- camisa chelsea -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/img/home/camisas/chelsea.jpg" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy">INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">CAMISA CHELSEA</a>
+                        <p class="product-price">R$ 250.00</p>
+                        <p class="product-price"><s>R$ 240.00</s></p>
+                    </div>
+
+                    <div class="off-info">
+                        <h2 class="sm-title">10% off</h2>
+                    </div>
+                </div>
+                <!-- FIM -->
+                <!-- camisa city -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/img/home/camisas/city.png" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">Manchester City </a>
+                        <p class="product-price">R$ 250,00</p>
+                        <p class="product-price"><s>R$ 125,00</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">50% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM-->
+                
+                <!-- camisa real madrid-->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/img/home/camisas/real-madri.png" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">CAMISA REAL MADRID</a>
+                        <p class="product-price">R$ 250.00</p>
+                        <p class="product-price"><s>R$ 175.00</s></p>
+                    </div>
+
+                    <div class="off-info">
+                        <h2 class="sm-title">30% off</h2>
+                    </div>
+                </div>
+                <!--FIM -->
+
+
+
+                <!-- chuteira puma -->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/chuteira puma.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">CHUTEIRA PUMA FUTURE 1.3 CAMPO MASCULINA</a>
+                        <p class="product-price">R$ 1.199,90</p>
+                        <p class="product-price"><s>R$ 959,92</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">20% off</h2>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+                <!--FIM -->
+                
+                
+                <!--chuteira nike vapor14-->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/chuteira-nike-mercurial-vapor-14-pro-unissex-CU5693-760-1-11627399232.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">Chuteira Nike Mercurial Vapor 14 Elite Campo</a>
+                        <p class="product-price">R$ 1699.99</p>
+                        <p class="product-price"><s>R$ 1159.99</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">32% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+
+                <!--chuteira nike vapor13-->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/chuteira_nike_mercurial_vapor_13_elite_neymar_jr_fg_1423_3_20200429120448.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">CHUTEIRA NIKE MERCURIAL VAPOR 13 ELITE NEYMAR JR FG</a>
+                        <p class="product-price">R$ 1300,00</p>
+                        <p class="product-price"><S>R$ 549.90</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">61% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+
+                <!--luva de goleiro penalty-->
+
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/luva1.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">LUVA GOLEIRO PENALTY DELTA 1 INFANTIL X</a>
+                        <p class="product-price">R$ 79,99</p>
+                        <p class="product-price"></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">INFANTIL</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+
+                <!--luva de goleiro adidas-->
+
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/luvaadidas.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">LUVAS GOLEIRO PREDATOR LEAGUE</a>
+                        <p class="product-price">R$ 449,99</p>
+                        <p class="product-price"><s>R$ 299.99</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">30% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+
+
+                <!--meiao futebol-->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/meiao.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">Meião Nike Classic Football Dri-FIT - Preto</a>
+                        <p class="product-price">R$ 99,99</p>
+                        <p class="product-price"><s>R$ 79.99</s></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">20% off</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+
+                <!--bola de futebol copa 2022-->
+                <div class="product">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Etapa-3/ofertas/img-ofertas/bola-de-futebol-de-campo-adidas-al-rihla-copa-do-mundo-2022-training-img.webp" alt="product image">
+                        </div>
+                        <div class="product-btns">
+                            
+                            <button type="button" class="btn-buy"> INDISPONIVEL
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="sm-title">lifestyle</h2>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                        </div>
+                        <a href="#" class="product-name">Bola de Futebol de Campo adidas Al Rihla Copa do Mundo 2022 Training</a>
+                        <p class="product-price">R$ 179,99</p>
+                        <p class="product-price"></p>
+
+                        <div class="off-info">
+                            <h2 class="sm-title">Últimas Unidades</h2>
+                        </div>
+                    </div>
+                </div>
+                <!--FIM-->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FIM -->
+    
+
+
+ <!-- RODA PÉ -->
+
+
+ <body>
+
+    <div class="conteudo"></div>
+
+
+    <!-- RODA PÉ -->
+    <div class="conteudo"></div>
+    <footer>
+        <div class="boxs">
+            <ul>
+                <li><a href="#"></a>ESPORTE</li>
+                <li><a href="#"></a>FUTEBOL</li>
+                <li><a href="#"></a>AMOR</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <ul>
+                <li><a href="#"></a>INOVAR</li>
+                <li><a href="#"></a>RENOVAR</li>
+                <li><a href="#"></a>REINVENTAR</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <ul>
+                <li><a href="#"></a>INSPIRAR</li>
+                <li><a href="#"></a>TRANSFORMAR</li>
+                <li><a href="#"></a>REALIZAR</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <ul>
+                <li><a href="#"></a>FOCO</li>
+                <li><a href="#"></a>ADRENALINA</li>
+                <li><a href="#"></a>EMOÇÃO</li>
+            </ul>
+        </div>
+        <div class="boxs sobrenos">
+            <h2>Sobre nós</h2>
+            <p class="textorodape">
+                A NetSoccer providencia a melhor experiência online de venda de produtos esportivos para os vendedores e
+                clientes, com maior interação entre os mesmos. Oferecendo maior conectividade e inovação à todos.
+            </p>
+        </div>
+    </footer>
+
+</body>
+<!-- FIM -->
+
+
+
+
+
+
+
+
+</body>
+</html>

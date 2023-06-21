@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - NetSoccer</title>
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/barra-inicial.css">
+    <link rel="stylesheet" href="/Etapa-3/relatorios/relatorios.css">
+    <script src="/Etapa-3/home/home.js" defer></script>
+</head>
+
+<!--Barra da página incial-->
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/home.html" class="logo link"><img src="/Etapa-3/img/home/logo_img/logo.png"
+                        width="230" height="110" alt="logo do site " id="imgpos" /></a>
+
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/home.html" class="nav-link link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Etapa-3/ofertas/ofertas.html" class="nav-link link">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="\Etapa-3\lancamentos\lancamentos.html" class="nav-link link">Lançamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Etapa-3/relatorios/relatorios.html" class="nav-link link">Relatorios</a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Codigo de quando a tela fica responsivel a barra responde
+            menu de navegação lateral animado e que pode ser fechado.  -->
+            <div class="nav-toggle-btn" onclick="openNav()">
+
+
+                <!--Codigo para que quando a tela fica responsivel com a barra ela aparece com o login e senha -->
+                <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-toggle-icon">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+
+
+    </header>
+    <!--Codigo para ativar a barra de pesquisa e login quando fica responsivel-->
+    <script>
+        function openNav() {
+            document.querySelector('.nav-container').classList.toggle('show-nav')
+        }
+    </script>
+
+<body>
+
+    <!-- Para chamar canvas, jquery e chart -->
+    <canvas id="myChart"></canvas>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="/Etapa-3/relatorios/relatorios.js"></script>    
+
+    <!-- Fim -->
+</body>
+
+</html>
+
+        <!-- RODA PÉ -->
+        <div class="conteudo"></div>
+        <footer>
+
+            <div class="motivacional">
+                <p><br>AMOR<br>FUTEBOL<br>ESPORTE</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INOVAR<br>RENOVAR<br>REINVENTAR</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INSPIRAR<br>REALIZAR<br>TRANSFORMAR</p>
+            </div>
+
+            <div class="separador5"></div>
+
+            <div class="caixasobre">
+                <h2>Sobre nós</h2>
+                <p class="textorodape">
+                    A NetSoccer providencia a melhor experiência online para que vendedores consigam
+                    ir além das fronteiras de seu comércio e consigam levar
+                    seus produtos para clientes em qualquer lugar do país. 
+                    Nosso compromisso é levar a nossos clientes maior conectividade, agilidade e inovação.
+                </p>
+            </div>
+        </footer>
+</html>

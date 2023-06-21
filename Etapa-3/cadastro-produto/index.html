@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NetSoccer - Cadastro de Produtos</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/Etapa-3/cadastro-produto/marca.css">
+        <link rel="stylesheet" type="text/css" href="/Etapa-3/home/home.css">
+        <link rel="stylesheet" type="text/css" href="/Etapa-3/home/barra-inicial.css">
+    </head>
+
+    <body onload="init()">
+
+        <header class="main-header"></header>
+
+        <div style="height: 40px"></div>
+
+
+        <div class="tipoProduto">
+            <div class="linhaVerde1"></div>
+            <a href="/home.html"><img class="logo" src="/Etapa-3/img/home/logo_img/logo.cadastro.png"
+                alt="Logotipo da Net Soccer"></a>
+            <div class="linhaVerde2"></div>
+        </div>
+
+        <h1>Cadastro de Produtos</h1>
+
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                    <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+                </div>
+            </div>
+
+            <form id="form-contato">
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label for="inputId">Id</label>
+                        <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                    </div>
+                    <div class="col-sm-8">
+                        <label for="inputDescricao">Descrição (*)</label>
+                        <input type="text" class="form-control" id="inputDescricao" required
+                            placeholder="Qual o produto pretende vender? Ex.: Camisa, Chuteira...">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-5">
+                        <label for="inputTelefone">Telefone (*)</label>
+                        <input type="number" class="form-control" id="inputTelefone" required placeholder="Telefone">
+                    </div>
+                    <div class="col-sm-7">
+                        <label for="inputEmail">E-mail (*)</label>
+                        <input type="email" class="form-control" id="inputEmail" required placeholder="Informe o e-mail">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="filtro_marca">Marca</label>
+                        <select name="filtro_marca" id="inputMarca" onchange="ListaContatos()" class="form-control">
+                            <option value="Adidas">Adidas</option>
+                            <option value="Asics">Asics</option>
+                            <option value="Joma">Joma</option>
+                            <option value="Mizuno">Mizuno</option>
+                            <option value="Nike">Nike</option>
+                            <option value="Penalty">Penalty</option>
+                            <option value="Puma">Puma</option>
+                            <option value="Umbro">Umbro</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="filtro_tamanho">Tamanho</label>
+                        <select name="filtro_tamanho" id="inputTamanho" onchange="ListaContatos()"
+                            class="form-control">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XG">XG</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="37">42</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="filtro_desconto">Desconto</label>
+                        <select name="filtro_desconto" id="inputDesconto" onchange="ListaContatos()"
+                            class="form-control">
+                            <option value="">Sem Desconto</option>
+                            <option value="5%">5%</option>
+                            <option value="10%">10%</option>
+                            <option value="15%">15%</option>
+                            <option value="20%">20%</option>
+                            <option value="25%">25%</option>
+                            <option value="30%">30%</option>
+                            <option value="35%">35%</option>
+                            <option value="40%">40%</option>
+                            <option value="45%">45%</option>
+                            <option value="50%">50%</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="inputPreco">Preço</label> (*)</label>
+                        <input type="number" class="form-control" id="inputPreco" required placeholder="Valor do Produto">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <small>(*) Campos obrigatórios</small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                        <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                        <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                        <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                        <a href="lista_contatos.html"><input type="button" class="btn btn-warning" id="btnClear"
+                                value="Pesquisar Contatos"></a>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid-contatos" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Cidade</th>
+                                <th scope="col">Tamnho</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Desconto</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="table-contatos">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <script>
+            function exibeContatos() {
+                // Remove todas as linhas do corpo da tabela
+                $("#table-contatos").html("");
+
+                // Popula a tabela com os registros do banco de dados
+                for (i = 0; i < db.data.length; i++) {
+                    let contato = db.data[i];
+                    $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
+                                                    <td>${contato.descricao}</td>
+                                                    <td>${contato.telefone}</td>
+                                                    <td>${contato.email}</td>
+                                                    <td>${contato.marca}</td>
+                                                    <td>${contato.tamanho}</td>
+                                                    <td>${contato.preco}</td>
+                                                    <td>${contato.desconto}</td>
+                                                </tr>`);
+                }
+            }
+
+            function init() {
+                // Adiciona funções para tratar os eventos 
+                $("#btnInsert").click(function () {
+                    // Verfica se o formulário está preenchido corretamente
+                    if (!$('#form-contato')[0].checkValidity()) {
+                        displayMessage("Preencha os campos corretamente.");
+                        return;
+                    }
+
+                    // Obtem os valores dos campos do formulário
+                    let campoDescricao = $("#inputDescricao").val();
+                    let campoTelefone = $("#inputTelefone").val();
+                    let campoEmail = $('#inputEmail').val();
+                    let campoMarca = $("#inputMarca").val();
+                    let campoTamanho = $('#inputTamanho').val();
+                    let campoPreco = $('#inputPreco').val();
+                    let campoDesconto = $('#inputDesconto').val();
+
+                    let contato = {
+                        descricao: campoDescricao,
+                        telefone: campoTelefone,
+                        email: campoEmail,
+                        marca: campoMarca,
+                        tamanho: campoTamanho,
+                        preco: campoPreco,
+                        desconto: campoDesconto
+
+                    };
+
+                    insertContato(contato);
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+                // Intercepta o click do botão Alterar
+                $("#btnUpdate").click(function () {
+                    // Obtem os valores dos campos do formulário
+                    let campoId = $("#inputId").val();
+                    if (campoId == "") {
+                        displayMessage("Selecione um contato para ser alterado.");
+                        return;
+                    }
+                    let campoDescricao = $("#inputDescricao").val();
+                    let campoTelefone = $("#inputTelefone").val();
+                    let campoEmail = $("#inputEmail").val();
+                    let campoMarca = $("#inputMarca").val();
+                    let campoTamanho = $("#inputTamanho").val();
+                    let campoPreco = $('#inputPreco').val();
+                    let campoDesconto = $('#inputDesconto').val();
+                    let contato = {
+                        descricao: campoDescricao,
+                        telefone: campoTelefone,
+                        email: campoEmail,
+                        marca: campoMarca,
+                        tamanho: campoTamanho,
+                        preco: campoPreco,
+                        desconto: campoDesconto
+
+                    };
+
+                    updateContato(parseInt(campoId), contato);
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+                // Intercepta o click do botão Excluir
+                $("#btnDelete").click(function () {
+                    let campoId = $("#inputId").val();
+                    if (campoId == "") {
+                        displayMessage("Selecione um contato a ser excluído.");
+                        return;
+                    }
+                    deleteContato(parseInt(campoId));
+
+                    // Reexibe os contatos
+                    exibeContatos();
+
+                    // Limpa o formulario
+                    $("#form-contato")[0].reset();
+                });
+
+                // Intercepta o click do botão Listar Contatos
+                $("#btnClear").click(function () {
+                    $("#form-contato")[0].reset();
+                });
+
+                // Oculta a mensagem de aviso após alguns segundos
+                $('#msg').bind("DOMSubtreeModified", function () {
+                    window.setTimeout(function () {
+                        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                            $(this).remove();
+                        });
+                    }, 5000);
+                });
+
+                // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+                $("#grid-contatos").on("click", "tr", function (e) {
+                    let linhaContato = this;
+                    colunas = linhaContato.querySelectorAll("td");
+
+                    $("#inputId").val(colunas[0].innerText);
+                    $("#inputDescricao").val(colunas[1].innerText);
+                    $("#inputTelefone").val(colunas[2].innerText);
+                    $("#inputEmail").val(colunas[3].innerText);
+                    $("#inputMarca").val(colunas[4].innerText);
+                    $("#inputTamanho").val(colunas[5].innerText);
+                    $("#inputPreco").val(colunas[6].innerText);
+                    $("#inputDesconto").val(colunas[7].innerText);
+
+                });
+
+                exibeContatos();
+            }
+        </script>
+
+
+        <div class="separador"></div>
+
+
+        <!-- RODA PÉ -->
+        <div class="conteudo"></div>
+        <footer>
+
+            <div class="motivacional">
+                <p><br>AMOR<br>FUTEBOL<br>ESPORTE</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INOVAR<br>RENOVAR<br>REINVENTAR</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INSPIRAR<br>REALIZAR<br>TRANSFORMAR</p>
+            </div>
+
+            <div class="separador5"></div>
+
+            <div class="caixasobre">
+                <h2>Sobre nós</h2>
+                <p class="textorodape">
+                    A NetSoccer providencia a melhor experiência online para que vendedores consigam
+                    ir além das fronteiras de seu comércio e consigam levar
+                    seus produtos para clientes em qualquer lugar do país. 
+                    Nosso compromisso é levar a nossos clientes maior conectividade, agilidade e inovação.
+                </p>
+            </div>
+        </footer>
+        
+    </body>
+
+</html>

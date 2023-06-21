@@ -1,0 +1,265 @@
+@import url();
+
+
+/* encostar a barra no alto da página*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* html da página, usada para textos formais e em títulos de jornais ou revistas.*/
+
+html {
+    font-family: sans-serif;
+    /* html da página, usada para textos formais e em títulos de jornais ou revistas.*/
+}
+
+
+
+.link {
+    text-decoration: none;
+    /* A propriedade text-decoration é usada para “decorar” o conteúdo do texto. É essencialmente decorar o texto com diferentes tipos de linhas. É uma propriedade abreviada para text-decoration-line(required),
+        text-decoration-color e text-decoration-style.*/
+    /* Escondendo conteúdo com display: none Quando escondemos um elemento com a declaração display: none, o navegador não gera um box para ele e em consequência ele não é visto na tela e não interfere com o layout da página.*/
+
+
+    color: inherit;
+    /* Inherit significa simplesmente que o estilo será herdado do elemento pai. De acordo com a própria W3C o Inherit: Especifica que uma propriedade deve herdar seu valor de seu elemento pai.*/
+}
+
+
+
+/* Cor, tamanho da barra de navegaçao*/
+
+.nav-container {
+    background: linear-gradient(to right, rgb(2, 64, 12), rgb(6, 158, 36));
+    display: flex;
+    /* Qual a função do display flex? O Flexbox é um conceito do CSS3 que visa organizar os elementos de uma página HTML dentro de seus containers de forma dinâmica. Ou seja,
+        independente das suas dimensões eles sempre manterão um layout flexível dentro do seu elemento pai,
+        reorganizando-se e acordo com a necessidade.*/
+    justify-content: space-between;
+    /* A propriedade justify-content (en-US) é empregada para alinhar os elementos ao longo do eixo principal,
+        cuja direção (row ou column) é definida a partir da propriedade flex-direction*/
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+
+/* Fonte e tamanho da logo */
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2px;
+    margin-right: 2px;
+}
+
+
+/* Deixar os botoes da barra de navegaçao centralizados */
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* A propriedade justify-content (en-US) é empregada para alinhar os elementos ao longo do eixo principal,
+cuja direção (row ou column) é definida a partir da propriedade flex-directio */
+.nav-right {
+    justify-content: flex-end;
+}
+
+/* Deixar os botoes da barra de navegaçao esquerdos centralizados dentro da barra */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+/* Cor dos botoes */
+.nav-link {
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Espaçamento dos botoes */
+.nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Tamanho e largura da barra de pesquisa */
+
+#search-input {
+    background: none;
+    width: 350px;
+    height: 35px;
+    border: 1px solid white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+
+/*:focus do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário). */
+#search-input:focus {
+    outline: none;
+    /* O que é outline none? outset - Define um esboço início 3D. O efeito depende do valor outline-color. none - Define sem contorno. */
+}
+
+
+/* Botão de pesquisa, da barra de pesquisa, tamanho e cor do botão */
+#search-btn {
+    border: none;
+    height: 35px;
+    width: 100px;
+    padding: 0 15px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #15202b;
+}
+
+/* Espaçamento dos botoes de pesquisa ao da barra de pesquisa */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/*Cor desntro da barra de pesquisa (Pesquisa) */
+#search-input::placeholder {
+    color: #ccc;
+}
+
+
+/* Botão de login cor e tamanho */
+#login-link {
+    background: #f6f8f5;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    color: #15202b;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+/* Botão de Criar conta cor e tamanho */
+#signup-link {
+    background: #573b8a;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+}
+
+/*Cor do botão v quando estiver responsivo */
+.nav-toggle-icon {
+    color: rgb(241, 239, 239);
+}
+
+/*Faz que o butão v so aparece quandoestiver responsivo */
+.nav-toggle-btn {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*O que significa @media no CSS? Media queries é uma técnica de consulta de mídia que atribui diferentes estilos CSS para diferentes resoluções de tela possibilitando assim fornecer um visual diferente a cada resolução detectada. As Media queries definem condições para utilização de estilos CSS. */
+@media(max-width: 1350px) {
+    .nav-container {
+        padding: 10px;
+    }
+
+    .logo,
+    .search-form,
+    #login-link {
+        margin-right: 20px;
+    }
+
+    #search-input {
+        width: 300px;
+    }
+
+    #login-link,
+    #signup-link {
+        padding: 10px 15px;
+    }
+}
+
+@media(max-width: 1130px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-left {
+        margin-bottom: 10px;
+    }
+
+    #search-input {
+        width: 250px;
+    }
+}
+
+@media(max-width: 620px) {
+
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .nav-toggle-btn {
+        display: block;
+    }
+
+    .show-nav .nav-right {
+        display: flex;
+    }
+
+    #search-input {
+        width: 200px;
+    }
+
+    .search-form {
+        margin: 0;
+    }
+
+    .user-nav {
+        margin-top: 10px;
+    }
+
+    #login-link,
+    #signup-link {
+        display: inline-block;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .show-nav .nav-toggle-icon {
+        transform: rotate(180deg);
+    }
+}
+
+
+.insta-container .HeaderCta {
+    display: none;
+}
+
+/*FIM */

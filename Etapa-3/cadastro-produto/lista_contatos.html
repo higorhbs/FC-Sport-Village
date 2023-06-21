@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Etapa-3/cadastro-produto/marca.css">
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/Etapa-3/home/barra-inicial.css">
+</head>
+
+
+<body onload="ListaContatos()">
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/home.html" class="logo link"><img src="/Etapa-3/img/home/logo_img/logo.png" width="230"
+                        height="110" alt="logo do site " id="imgpos" /></a>
+
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/home.html" class="nav-link link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Etapa-3/ofertas/ofertas.html" class="nav-link link">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="\Etapa-3\lancamentos\lancamentos.html" class="nav-link link">Lançamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Etapa-3/relatorios/relatorios.html" class="nav-link link">Relatorios</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Codigo de quando a tela fica responsivel a barra responde
+                menu de navegação lateral animado e que pode ser fechado.  -->
+            <div class="nav-toggle-btn" onclick="openNav()">
+
+
+                <!--Codigo para que quando a tela fica responsivel com a barra ela aparece com o login e senha -->
+                <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-toggle-icon">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+
+
+
+        <div class="tipoProduto">
+            <div class="linhaVerde1"></div>
+            <a href="/home.html"><img class="logo" src="/Etapa-3/img/home/logo_img/logo.cadastro.png"
+                    alt="Logotipo da Net Soccer"></a>
+            <div class="linhaVerde2"></div>
+        </div>
+
+        <h1>Listagem de Produtos</h1>
+
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                    <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+                </div>
+            </div>
+
+            <form id="form-contato">
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <select name="filtro_marca" id="filtro_marca" onchange="ListaContatos()" class="form-control">
+                            <option value="">Marcas</option>
+                            <option value="Adidas">Adidas</option>
+                            <option value="Asics">Asics</option>
+                            <option value="Joma">Joma</option>
+                            <option value="Mizuno">Mizuno</option>
+                            <option value="Nike">Nike</option>
+                            <option value="Penalty">Penalty</option>
+                            <option value="Puma">Puma</option>
+                            <option value="Umbro">Umbro</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <select name="filtro_tamanho" id="filtro_tamanho" onchange="ListaContatos()"
+                            class="form-control">
+                            <option value="">Tamanho</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XG">XG</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="37">42</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <select name="filtro_desconto" id="filtro_desconto" onchange="ListaContatos()"
+                            class="form-control">
+                            <option value="">Desconto</option>
+                            <option value="5%">5%</option>
+                            <option value="10%">10%</option>
+                            <option value="15%">15%</option>
+                            <option value="20%">20%</option>
+                            <option value="25%">25%</option>
+                            <option value="30%">30%</option>
+                            <option value="35%">35%</option>
+                            <option value="40%">40%</option>
+                            <option value="45%">45%</option>
+                            <option value="50%">50%</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid-contatos" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Descrição do Produto</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Tamanho</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Desconto</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-contatos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="\Etapa-3\cadastro-produto\app.js"></script>
+        <script>
+            // função para listar na tabela os contatos que estão associados aos filtros 
+            function ListaContatos() {
+
+                // Obtem os dados informados pelo usuário nos filtros
+                let fc = document.getElementById('filtro_marca').value;
+                let fcg = document.getElementById('filtro_tamanho').value;
+                let fcd = document.getElementById('filtro_desconto').value;
+
+
+                // limpa a lista de contatos apresentados
+                $("#table-contatos").empty();
+
+                // Popula a tabela com os registros do banco de dados
+                for (let index = 0; index < db.data.length; index++) {
+                    const contato = db.data[index];
+
+                    // Verifica se os dados do contato batem com os filtros
+                    if (((contato.marca == fc) || (fc == '')) &&
+                        ((contato.tamanho == fcg) || (fcg == '')) &&
+                        ((contato.desconto == fcd) || (fcd == ''))) {
+
+                        // Inclui o contato na tabela    
+                        $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
+                                                        <td>${contato.descricao}</td>
+                                                        <td>${contato.telefone}</td>
+                                                        <td>${contato.email}</td>
+                                                        <td>${contato.marca}</td>
+                                                        <td>${contato.tamanho}</td>
+                                                        <td>${contato.preco}</td>
+                                                        <td>${contato.desconto}</td>
+                                                    </tr>`);
+                    }
+                }
+
+            }
+        </script>
+        <br><br>
+
+        <div>
+            <p style="font-size: 16px; color:brown; text-align:center">*ATENÇÃO: Em razão de limitações em nossos
+                servidores não
+                podemos hospedar imagens dos produtos.<br />
+                Para receber imagens e vídeos dos produtos, por favor, contacte o vendedor. <br />
+                Agradecemos a compreensão e pedimos desculpas o transtorno.
+            </p>
+        </div>
+
+        <div class="separador"></div>
+
+
+        <!-- RODA PÉ -->
+        <div class="conteudo"></div>
+        <footer>
+
+            <div class="motivacional">
+                <p><br>AMOR<br>FUTEBOL<br>ESPORTE</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INOVAR<br>RENOVAR<br>REINVENTAR</p>
+            </div>
+
+            <div class="motivacional">
+                <p><br>INSPIRAR<br>REALIZAR<br>TRANSFORMAR</p>
+            </div>
+
+            <div class="separador5"></div>
+
+            <div class="caixasobre">
+                <h2>Sobre nós</h2>
+                <p class="textorodape">
+                    A NetSoccer providencia a melhor experiência online para que vendedores consigam
+                    ir além das fronteiras de seu comércio e consigam levar
+                    seus produtos para clientes em qualquer lugar do país.
+                    Nosso compromisso é levar a nossos clientes maior conectividade, agilidade e inovação.
+                </p>
+            </div>
+        </footer>
+
+</body>
+
+</html>

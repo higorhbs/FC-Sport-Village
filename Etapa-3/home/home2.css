@@ -1,0 +1,98 @@
+
+/* propriedade do espaço branco */
+.caixabranca {
+    width: 800px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    /* border: solid 1px black; */
+}
+
+.organizador {
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    padding-top: 40px;
+}
+
+/* propriedade do botão sou comprador */
+.comprador, .vendedor {
+    width: 200px;
+    height: 27px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(11, 179, 36);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.comprador:hover {
+    background-color: #63c928;
+    transition: 0.2s ease-out;
+}
+
+.vendedor:hover {
+    background-color: #63c928;
+    transition: 0.2s ease-out;
+}
+
+
+footer {
+    grid-area: rodape;
+    width: auto;
+    margin: 0 auto;
+    background: rgb(4, 4, 4); 
+    color: white;
+
+    display:flex;
+    height: fit-content;
+}
+
+.motivacional {
+    text-align: center;
+
+    height: fit-content;
+    justify-content: space-around;
+    padding: 0 0px 0 50px;
+    border: 0;
+    margin: 0;
+}
+
+.separador5 {
+    border: solid 1px rgb(4, 4, 4);
+
+    width: 30%;
+    height: auto;
+}
+
+.caixasobre {
+    display: flex;
+    padding-right: 50px;
+    padding: 0;
+    border: 0;
+}
+
+
+/* Propriedades da caixa de texto com a frase "Sobre Nós" */
+h2 {
+    color: #717171;
+    text-align: center;
+
+    height: fit-content;
+    margin: 0px;
+    padding-top: 40px;
+}
+
+/* Caixa de texto com o texto "A NetSoccer providencia a melhor..." */
+.textorodape {
+    text-align: center;
+    color: #f2f2f2;
+    
+    height: fit-content;
+    margin: 30px;
+}

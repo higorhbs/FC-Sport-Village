@@ -1,0 +1,294 @@
+/* Importação da fonte */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Fim da imporação da fonte */
+
+/* Propriedades gerais */
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Propriedades gerais */
+body {
+    background-color: #f3f3f3;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+/* propriedades da barra verde */
+header {
+    height: 100px;
+    background: linear-gradient(to right, rgb(16, 248, 54), rgb(1, 74, 16));
+}
+
+.main-header {
+    
+}
+
+/* proriedades da logomarca */
+.logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* Propriedades da div caixaBranca */
+.caixaBranca {
+    /* border: solid 1px black; */
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+/* Propriedade da div da Logo */
+.logoMarca {
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: center;
+}
+
+/* Propriedades da div com os produtos */
+.tipoProduto {
+    /* border: solid 1px black; */
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+}
+
+/* Propriedades das linhas verdes ao redor do título */
+.linhaVerde1,
+.linhaVerde2 {
+    /* border: solid 1px black; */
+    height: 5px;
+    width: 120px;
+    margin-top: 25px;
+    background: green;
+    background: linear-gradient(to right, rgb(16, 248, 54), rgb(1, 74, 16));
+}
+
+/* Propriedades do título  */
+.titulo {
+    /* border: solid 1px black; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    text-align: center;
+}
+
+/* Propriedades das logo das marca */
+.logoAdiddas,
+.logoNike,
+.logoPenalty,
+.logoPuma {
+    width: 100px;
+    height: 75px;
+    padding: 20px;
+}
+
+/* Propriedades das logo da Marca */
+.logoAsics,
+.logoMizuno,
+.logoJoma,
+.logoUmbro {
+    width: 100px;
+    height: 75px;
+    padding: 20px;
+}
+
+/* Propriedades da div que separar o footer do restante */
+.separador {
+    /* border: solid 1px black; */
+    width: auto;
+    height: 10px;
+}
+
+/* Propriedades do Footer */
+footer {
+    width: auto;
+    margin: 0 auto;
+    background: rgb(4, 4, 4);
+    color: white;
+}
+
+.motivacional {
+    text-align: center;
+}
+
+.separador,
+.separador2 {
+    /* border: solid 1px rgb(4, 4, 4); */
+    height: 30px;
+}
+
+/* Propriedades da caixa de texto com a frase "Sobre Nós" */
+h2 {
+    color: #717171;
+    text-align: center;
+}
+
+/* Caixa de texto com o texto "A NetSoccer providencia a melhor..." */
+.textorodape {
+    text-align: center;
+    color: #f2f2f2;
+}
+
+/* ================================================================================ */
+
+/* Propriedades da página para resolução a partir de 650px */
+@media only screen and (min-width:650px) {
+
+    /* Propriedades gerais */
+    body {
+        background-color: #f3f3f3;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+    }
+
+    /* Propriedades da div caixaBranca */
+    .caixaBranca {
+        /* border: solid 1px black; */
+        max-width: 550px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 40px;
+    }
+
+    /* Propriedades das linhas verdes ao redor do título */
+    .linhaVerde1,
+    .linhaVerde2 {
+        /* border: solid 1px black; */
+        height: 5px;
+        width: 250px;
+        margin-top: 25px;
+        background: green;
+        background: linear-gradient(to right, rgb(16, 248, 54), rgb(1, 74, 16));
+    }
+
+    /* Propriedades da div que separar o footer do restante */
+    .separador {
+        /* border: solid 1px black; */
+        width: auto;
+        height: 10px;
+    }
+
+    /* Propriedades do Footer */
+    footer {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .motivacional {
+        text-align: center;
+    }
+
+    .separador2 {
+        width: 30%;
+        height: auto;
+    }
+
+    .caixasobre {
+        padding-right: 50px;
+        padding: 0;
+        border: 0;
+    }
+
+    h2 {
+        height: fit-content;
+        margin: 0px;
+        padding-top: 40px;
+    }
+
+    .textorodape {
+        height: fit-content;
+        margin: 30px;
+    }
+}
+
+/* ================================================================================ */
+/* Propriedades da página para resolução a partir de 900px */
+@media only screen and (min-width: 900px) {
+
+    /* Propriedades gerais */
+    body {
+        background-color: #f3f3f3;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+    }
+
+    /* Propriedade da div da Logo */
+    .logo {
+        /* border: solid 1px black; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    /* Propriedades das linhas verdes ao redor do título */
+    .linhaVerde1,
+    .linhaVerde2 {
+        /* border: solid 1px black; */
+        height: 5px;
+        width: 600px;
+        margin-top: 60px;
+        background: green;
+        background: linear-gradient(to right, rgb(16, 248, 54), rgb(1, 74, 16));
+    }
+
+    /* Propriedades da div que separar o footer do restante */
+    .separador {
+        /* border: solid 1px black; */
+        width: auto;
+        height: 100px;
+        background-color: #f3f3f3;
+    }
+
+    footer {
+        display: flex;
+        height: fit-content;
+    }
+
+    .motivacional {
+        height: fit-content;
+        justify-content: space-around;
+        padding: 0 0px 0 50px;
+        border: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .separador5 {
+        width: 30%;
+        height: auto;
+    }
+
+    .caixasobre {
+        display: flex;
+        padding-right: 50px;
+        padding: 0;
+        border: 0;
+    }
+
+    h2 {
+        height: fit-content;
+        margin: 0px;
+        padding-top: 40px;
+    }
+
+    .textorodape {
+        height: fit-content;
+        margin: 30px;
+    }
+}

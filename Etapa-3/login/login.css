@@ -1,0 +1,68 @@
+/* Importação da fonte */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Fim da imporação da fonte */
+
+/* Configurações gerais */
+* {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* propriedades gerais */
+body {
+    background-color: #f3f3f3;
+    padding: 0;
+    margin: 0;
+}
+
+/* organização da tela para mobile */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cabecalho"
+        "logomarca"
+        "texto"
+        "linhadivisoria"
+        "caixabranca"
+        "botao"
+        "rodape"
+        "sobrenos";
+}
+
+/* propriedades da barra verde acima da logo */
+header {
+    grid-area: cabecalho;
+    height: 100px;
+    background: linear-gradient(to right, rgb(1, 74, 16), rgb(16, 248, 54));
+}
+
+/* proriedades da logomarca */
+.logo {
+    grid-area: logomarca;
+    display: block;
+    margin: 0 auto;
+}
+
+/* proriedades do texto: Cadastro do Vendedor */
+.titulo {
+    grid-area: texto;
+    color: gray;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+}
+
+/* propriedades da linha divisória  que separa a logo da caixa branca */
+.linhaverde {
+    grid-area: linhadivisoria;
+    height: 5px;
+    background: green;
+    background: linear-gradient(to right, rgb(1, 74, 16), rgb(16, 248, 54));
+}
+
+/* Fim */
